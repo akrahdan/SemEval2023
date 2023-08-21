@@ -1,6 +1,6 @@
-# DuluthNLP at SemEval-2023 Task 12: AfriSenti-SemEval: Sentiment Analysis for Low-resource African Languages using Twitter Dataset
+# DuluthNLP at SemEval-2023 Task 12
 
-This repository contains the source code for our paper https://aclanthology.org/2023.semeval-1.236/. 
+This repository contains the source code for our paper [DuluthNLP at SemEval-2023 Task 12: AfriSenti-SemEval: Sentiment Analysis for Low-resource African Languages using Twitter Dataset](https://aclanthology.org/2023.semeval-1.236). The paper includes a description of a pretrained model, described below, that was trained from scratch on Twi, the predominant language in Ghana.
 
 # TwiBERT
 ## Model Description
@@ -12,6 +12,8 @@ The model was trained on a relatively limited dataset (approximately 5MB), which
 ## How to use it
 You can use TwiBERT by finetuning it on a downtream task. The example code below illustrates how you can use the TwiBERT model on a downtream task:
 
+``` python
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 model = AutoModelForTokenClassification.from_pretrained("sakrah/TwiBERT")
 tokenizer = AutoTokenizer.from_pretrained("sakrah/TwiBERT")
+```
